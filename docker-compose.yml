@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  eidas-proxy:
+      image: endimion13/esmo-mock-client:0.0.1
+      environment:
+        TEST: test
+      volumes:
+        - /home/user/configEidas:/configEidas 
+      ports:
+        - 8088:8088  

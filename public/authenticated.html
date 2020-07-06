@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>Authentication Succesful</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-light bg-light" style="margin-bottom: 4rem;">
+      <a class="navbar-brand" href="#">
+        <img src="img/airplane.png" width="90" height="90" alt="" />
+        <span style="    margin-left: 2em;">
+          Erasmus-Enabled Airlines: Offering exclusive services to ERASMUS students
+        </span>
+      </a>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <h1 style="font-weight: 300;color: #3d49a8;">
+            Erasmus status verified!
+          </h1>
+          <h2 style="color: #6c757d!important;font-size: 80%;">
+            Please fill in the rest of the data and click submit to finalize the
+            booking of your ticket
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <form>
+            <div class="form-group">
+              <label for="">Person Identifier</label>
+              <input
+                readonly
+                type="text"
+                class="form-control"
+                id="person_identifier"
+                value="{{ person_identifier }}"
+              />
+            </div>
+            <div class="form-group">
+              <label for="">Name</label>
+              <input
+                readonly
+                type="text"
+                class="form-control"
+                id="given_name"
+                placeholder="Enter given name"
+                value="{{ given_name }}"
+              />
+            </div>
+            <div class="form-group">
+              <label for="">Surname</label>
+              <input
+                readonly
+                type="text"
+                class="form-control"
+                id="family_name"
+                placeholder="Enter family name"
+                value="{{ family_name }}"
+              />
+            </div>
+            <div class="form-group">
+              <label for="">Date of Birth</label>
+              <input
+                readonly
+                type="text"
+                class="form-control"
+                id="date_of_birth"
+                placeholder="Enter your date of Birth"
+                value="{{ date_of_birth }}"
+              />
+            </div>
+            <div class="form-group">
+              <label for="">Place of Birth</label>
+              <input
+                readonly
+                type="text"
+                class="form-control"
+                id="place_of_birth"
+                placeholder="Enter for place of Birth"
+                value="{{ place_of_birth }}"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="">Gender</label>
+              <input
+                type="text"
+                class="form-control"
+                id="gender"
+                aria-describedby="genderHelp"
+                placeholder="Enter your gender"
+                value="{{ gender }}"
+              />
+            </div>
+            <div class="form-group">
+              <label for="mobile_phone">Mobile Phone</label>
+              <input
+                type="email"
+                class="form-control"
+                id="mobile_phone"
+                aria-describedby="mobile_phoneHelp"
+                placeholder="Enter your mobile phone number"
+                value="{{ mobile_phone }}"
+              />
+              <small id="mobile_phoneHelp" class="form-text text-muted"
+                >We'll never share your mobile phone number anyone else.</small
+              >
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter your email"
+                value="{{ email }}"
+              />
+              <small id="emailHelp" class="form-text text-muted"
+                >We'll never share your email with anyone else.</small
+              >
+            </div>
+            <div class="form-group">
+              <label for="">Sending Institution</label>
+              <input
+                readonly
+                type="text"
+                class="form-control"
+                id="sending_institution_page"
+                aria-describedby="sending_institution_pageHelp"
+                placeholder="Enter your sending Institution"
+                value="{{ sending_institution_page }}"
+              />
+            </div>
+            <div class="form-group">
+              <label for="">Sending Institution Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="sending_institution_name"
+                aria-describedby="sending_institution_nameHelp"
+                placeholder="Enter the name of your sending Institution"
+                value="{{ sending_institution_name }}"
+              />
+            </div>
+            <div class="form-group">
+              <label for="">Sending Institution Address</label>
+              <input
+                type="text"
+                class="form-control"
+                id="sending_institution_address"
+                placeholder="Enter your sending Institution address"
+                value="{{ sending_institution_address }}"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="">Institutional Email</label>
+              <input
+                type="text"
+                class="form-control"
+                id="institutional_email"
+                aria-describedby="institutional_emailHelp"
+                placeholder="Enter your institutional email"
+                value="{{ institutional_email }}"
+              />
+              <small id="institutional_emailHelp" class="form-text text-muted"
+                >We'll never share your institutional email with anyone
+                else.</small
+              >
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer" style="margin-top:3rem;">
+      <div class="container footer-container">
+        <div class="row">
+          <div
+            id="border"
+            style="border-top: 1px solid #d0d0d0;
+                             width: 91%;
+                             margin-left: 0.7rem;
+                             padding-top: 1em;"
+          ></div>
+
+          <div
+            class="col s12 m4 footerCol"
+            id="flags"
+            style="padding-left: 5em; "
+          >
+            <a
+              target="_blank"
+              href="https://ec.europa.eu/inea/en/connecting-europe-facility"
+            >
+              <img
+                src="img/en_cef.jpg"
+                class="responsive-img"
+                alt="cef"
+                style="max-width: 20rem;"
+              />
+            </a>
+          </div>
+          <div class="col s12  m4 footerCol" style="padding-left: 5em;">
+            <p
+              style="margin-top: 0;text-align: justify; color: #6c757d!important;font-size: 80%;
+                        font-weight: 350;"
+            >
+              The integration of this Service with the eIDAS Network has been
+              implemented by<a
+                href="http://www.atlantis-group.gr/"
+                target="_blank"
+              >
+                UAegean | i4m Lab</a
+              >, and funded by the European Commission (CEF Programme -
+              <a href="http://esmo-project.eu/" target="_blank">ESMO project</a>
+              | Agreement number: INEA/CEF/ICT/A2017/1451951)
+            </p>
+          </div>
+          <div
+            class="col s12  m4 footerCol"
+            style="padding-left: 5em; margin-top: 0.2%;"
+          >
+            <a target="_blank" href="//opensource.org"
+              ><img
+                src="img/open_source1-4.png"
+                class="responsive-img"
+                alt="cef"
+            /></a>
+
+            <p
+              style="margin:0; color: #6c757d!important;font-size: 80%;
+                        font-weight: 350;"
+            >
+              Developed with Open Source Software (OSS)
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "realm": "test",
+  "auth-server-url": "https://dss1.aegean.gr/auth",
+  "ssl-required": "external",
+  "resource": "unipi",
+  "credentials": {
+    "secret": "990ece79-2338-4503-a5db-bac2219d986b"
+  },
+  "confidential-port": 0
+}
